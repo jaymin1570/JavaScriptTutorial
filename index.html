@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>java script</title>
+    <!-- <script src="javascript.js"></script> external javascript -->
+
+</head>
+<body>
+    <!-- <form name="example">
+        <input type="text" size="20" name="calculator" >
+        <input type="button" name="B1" value="calculate" onclick="cal()">
+        <input type="Reset" name="B2" value="Reset">
+        Answer : <input type="text" name="answer" size="20">
+    </form> -->
+    <!-- <input type="button" value="YouTube" onclick="myfun()"> -->
+
+
+    <!-- <button onclick="myfun()">Click Me</button> -->
+    <!-- <button onmouseover="myfun()">Click Me</button> onmousedown,onmouseout -->
+
+    <!-- <input type="button" value="click me" onclick="confirmation()"> -->
+
+    <form name="myform" onsubmit="return validation()">
+        UserName : <input type="text" value="" id="user"><span id="username" style="color:red;"></span><br><br>
+        Password : <input type="password" value="" id="pass"><span id="password" style="color:red;"></span><br><br>
+        <input type="submit" value="Submit" >
+    </form>
+
+
+
+
+    <script>
+        // alert("welcome to Thapa Technical YouTube Channel");
+        // document.write("welcome to Thapa Technical YouTube Channel");
+
+        // var arrays = new Array('thapa','technical2 ');
+        // arrays[0]='thapa'; 
+        // arrays[1]='technical';
+        // var i =0;
+        // while(i<=1){
+        //     document.write(arrays[i],'<br>');
+        //     i++;
+        // }
+        
+        // var str = "javascript";
+        // var ans = str.charCodeAt(4); // print ascii value
+        // document.write(ans);
+
+        // var str = new String("ThapaTechnical");
+        // var ans = str.localeCompare("apa");
+        // document.write("localecompare = "+ ans);
+        
+        // function myfun(){
+        //     document.write("welcome bro");
+        // }
+
+        // function cal(){
+        //     document.example.answer.value=eval(document.example.calculator.value);
+        // }
+
+        // function myfun(){
+        //     debugger;
+        //     window.location="https://www.youtube.com"
+        // }
+
+        // Dialog box - alert,confirm,prompt
+        // function confirmation(){
+        //     var str =prompt("Hi, My name is JAYMIN and whats your Name :")
+        //     alert("Nice to meet you "+ str +"!")
+
+        //     // var ans=confirm('you want to see Website click on button');
+        //     // if(ans){
+        //     //     alert("welcome to thapa technical youtube channel");
+        //     //     window.location="https://www.youtube.com"
+        //     // }
+        //     // else{
+        //     //     alert("sorry! you click on cancle button ");
+        //     // }
+        // }
+
+        // Math object
+        // Math.floor(10.99)
+        // Math.round(10.99)
+        // Math.log(1)
+        //Math.max(10,11,33)
+        //Math.pow(2,7)
+        //Math.sqrt(25)
+        //Math.random()
+
+        // Date Methods
+        // document.write(Date());
+        // var dt = new Date();
+        // dt.getDay();
+        // dt.getTime();
+        // dt.getFullYear();
+        // dt.getHours();
+        // dt.getMinutes();
+        // dt.getMiliseconds();
+        // dt.getMonth();
+        // dt.Second();
+
+        function validation(){
+            var un = document.getElementById("user").value;
+            var pw = document.getElementById("pass").value;
+
+            if(un==""){
+                document.getElementById("username").innerHTML="**please fill the username";
+                return false;
+            }
+
+            if(pw==""){
+                document.getElementById("password").innerHTML="please enter the password";
+                return false;
+            }
+            else{
+                alert('Done');
+                return true;
+            }
+        }
+
+    </script>
+</body>
+</html>
